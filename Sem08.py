@@ -59,5 +59,5 @@ if uploaded_file is not None:
 
     cluster_counts = df['Cluster'].value_counts().reset_index()
     cluster_counts.columns = ['Cluster', 'Count']
-    pie_fig = px.pie(cluster_counts, names='Cluster', values='Count', title='Distribución de Clusters')
+    pie_fig = px.pie(cluster_counts, names='Cluster', values='Count', title='DISTRIBUCION DE LOS CLUSTER %')
     st.plotly_chart(pie_fig)

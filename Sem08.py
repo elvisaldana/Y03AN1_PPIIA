@@ -56,3 +56,8 @@ if uploaded_file is not None:
         st.plotly_chart(fig)
     else:
         st.write("Los datos deben tener al menos 2 columnas numéricas para visualizar los clusters.")
+
+    cluster_counts = df['Cluster'].value_counts().reset_index()
+    cluster_counts.columns = ['Cluster', 'Count']
+    pie_fig = px.pie(cluster_counts, names='Cluster', values='Count', title='Distribución de Clusters')
+    st.plotly_chart(pie_fig)

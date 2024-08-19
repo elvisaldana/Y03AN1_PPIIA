@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 import plotly.express as px
 
 # Título de la app
-st.title("K-Means Clustering con Streamlit")
+st.title("Dengue predictions in Iquitos, San Juan and Belen")
 
 # Subir archivo de Excel
 uploaded_file = st.file_uploader("Sube un archivo Excel", type=["xlsx"])

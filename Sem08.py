@@ -52,7 +52,7 @@ if uploaded_file is not None:
     if df_scaled.shape[1] >= 2:
         df_plot = pd.DataFrame(df_scaled, columns=[f'PC{i+1}'for i in range(df_scaled.shape[1])])
         df_plot['Cluster'] = clusters
-        fig = px.scatter(df_plot, x='PC1', y='PC2', color='Cluster', title='Visualización de Clusters')
+        fig = px.scatter(df_plot, x='PC1', y='PC2', color='Cluster', title='VISUALIZACION DE CLUSTER')
         st.plotly_chart(fig)
     else:
         st.write("Los datos deben tener al menos 2 columnas numéricas para visualizar los clusters.")
